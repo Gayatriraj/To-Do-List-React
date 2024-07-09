@@ -1,0 +1,72 @@
+/* Container to hold the input, select, and button elements */
+.form-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem; /* Space between elements */
+  margin-bottom: 1rem; /* Space below the form */
+}
+
+/* Adjusting form input and button styles */
+form input,
+form button {
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  border: none;
+  background: #f5f5f5;
+  box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+input,
+button:focus {
+  outline: 0;
+}
+
+form button {
+  color: #114357;
+  background: #f5f5f5;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+form button:hover {
+  color: #f29492;
+}
+
+/* Adjusting select styles */
+.select {
+  position: relative;
+  overflow: hidden;
+  box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.75);
+  transition: all 0.4s ease;
+  font-size: 1.5rem;
+  width: 200px; /* Set a specific width */
+}
+
+.select select {
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  border: none;
+  background: #f5f5f5;
+  width: 100%; /* Ensure the select element takes the full width of its container */
+  font-family: "Open Sans", sans-serif;
+  color: #114357;
+}
+
+.select::after {
+  content: "\25BC";
+  position: absolute;
+  background: #f5f5f5;
+  color: #114357;
+  top: 0;
+  right: 0;
+  padding: 0.5rem;
+  pointer-events: none;
+  transition: all 0.4s ease;
+}
+
+.select:hover::after {
+  color: #f29492;
+}

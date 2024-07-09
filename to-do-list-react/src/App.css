@@ -1,0 +1,84 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #b0db38;
+  background: -webkit-linear-gradient(to right, #f29492, #b0db38);
+  background: linear-gradient(to right, #f29492, #b0db38);
+  color: #fafafa;
+  font-family: "Open Sans", sans-serif;
+  min-height: 100vh;
+}
+
+header,
+form {
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fa-trash,
+.fa-check {
+  pointer-events: none;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.press-down {
+  box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.deleted {
+  transform: translateY(8rem) rotateZ(20deg);
+  opacity: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+.buttons-container {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 130px 0;
+}
+
+.buttons-container button {
+  margin: 0 10px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #f5f5f5;
+  color: #114357;
+  border: 2px solid #114357;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border-radius: 4px;
+}
+
+.buttons-container button:hover {
+  background-color: #114357;
+  color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+  .todo-list {
+    min-width: 60%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .todo-list {
+    min-width: 80%;
+  }
+}
